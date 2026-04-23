@@ -18,6 +18,9 @@ app.use(express.json());
 // Routes
 app.use('/api', authRoutes);
 app.use('/api/items', itemRoutes);
+app.get('/', (req, res) => {
+  res.json({ message: '🚀 Lost & Found API is running!' });
+});
 
 // MongoDB Connect
 mongoose.connect(process.env.MONGO_URI)
