@@ -9,7 +9,7 @@ const itemRoutes = require('./routes/items');
 const app = express();
 
 app.use(cors({
-  origin: '*',
+  origin: ['https://lost-found-app-6sm2.onrender.com', 'http://localhost:5173'],
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
